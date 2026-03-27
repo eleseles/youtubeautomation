@@ -35,7 +35,7 @@ export const blogPosts = {
     image: "/blog/faceless-videos.png",
     sections: [
       { id: "visuals", title: "Visuals", content: "Faceless content is key to automated youtube channel growth. Understanding how to make faceless youtube videos starts with gathering high-quality assets." },
-      { id: "audio", title: "Audio", content: "With YouTube Automation AI, you can create natural-sounding voiceovers that don't sound like robots." },
+      { id: "audio", title: "Audio", content: "With AI YouTube Automation, you can create natural-sounding voiceovers that don't sound like robots." },
       { id: "editing", title: "AI Editing", content: "Use advanced youtube automation software to assemble your videos automatically." }
     ]
   },

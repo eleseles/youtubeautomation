@@ -28,7 +28,7 @@ const HeroSection = () => {
 
           {/* Subtext */}
           <p className="max-w-2xl mx-auto text-lg md:text-xl text-gray-500 font-sans leading-relaxed">
-            The leading <span className="font-semibold text-gray-900">YouTube Automation AI</span> platform to build your <span className="font-semibold text-gray-900">YouTube automation business</span>. 
+            The leading <span className="font-semibold text-gray-900">AI YouTube Automation</span> platform to build your <span className="font-semibold text-gray-900">YouTube automation business</span>. 
             Automate your workflow, generate AI video scripts, and grow your automated youtube views on autopilot.
           </p>
 

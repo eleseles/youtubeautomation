@@ -35,7 +35,7 @@ export default function CookiesPage() {
                <div className="space-y-4">
                   <h2 className="text-2xl font-serif font-bold text-gray-900">2. Types of Cookies</h2>
                   <p>
-                     Essential cookies are necessary for core <span className="font-semibold text-gray-900">youtube automation AI</span> features related to authentication and security. Analytics cookies help us scale our <span className="font-semibold text-gray-900">youtube automation workflow</span> services.
+                     Essential cookies are necessary for core <span className="font-semibold text-gray-900">AI youtube automation</span> features related to authentication and security. Analytics cookies help us scale our <span className="font-semibold text-gray-900">youtube automation workflow</span> services.
                   </p>
                </div>
             </section>

@@ -35,7 +35,7 @@ export default function DisclaimerPage() {
                <div className="space-y-4">
                   <h2 className="text-2xl font-serif font-bold text-gray-900">2. Accuracy of Claims</h2>
                   <p>
-                     Testimonials and examples of <span className="font-semibold text-gray-900">youtube automation AI</span> results on this site are illustrative only. They do not represent what you should expect to achieve with our <span className="font-semibold text-gray-900">automated youtube software</span> without personal effort.
+                     Testimonials and examples of <span className="font-semibold text-gray-900">AI youtube automation</span> results on this site are illustrative only. They do not represent what you should expect to achieve with our <span className="font-semibold text-gray-900">automated youtube software</span> without personal effort.
                   </p>
                </div>
 

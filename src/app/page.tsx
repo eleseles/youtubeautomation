@@ -15,7 +15,7 @@ const jsonLd = {
     {
       "@type": "Organization",
       "@id": "https://youtubeautomation.app/#organization",
-      "name": "YouTube Automation AI",
+      "name": "AI YouTube Automation",
       "url": "https://youtubeautomation.app",
       "logo": {
         "@type": "ImageObject",

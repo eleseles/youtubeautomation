@@ -50,7 +50,7 @@ const WhatIsAuto = () => {
             <div className="glass rounded-[40px] p-8 md:p-12 shadow-2xl relative z-10">
                <div className="bg-gray-50 rounded-3xl p-8 border border-gray-100 italic font-serif text-xl md:text-2xl text-gray-800 leading-relaxed relative">
                   <span className="absolute -top-6 -left-2 text-6xl text-olive-green/20">"</span>
-                  The goal of <span className="text-olive-green font-bold">YouTube Automation AI</span> is to reclaim your time while maximizing your revenue potential through <span className="italic">strategic optimization</span>.
+                  The goal of <span className="text-olive-green font-bold">AI YouTube Automation</span> is to reclaim your time while maximizing your revenue potential through <span className="italic">strategic optimization</span>.
                </div>
                
                <div className="mt-8 flex flex-col md:flex-row items-center gap-6">

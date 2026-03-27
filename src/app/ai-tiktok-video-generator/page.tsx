@@ -89,7 +89,7 @@ export default function TikTokGeneratorPage() {
                  Ready to dominate <span className="text-olive-green italic font-medium">TikTok</span>?
               </h2>
               <p className="text-gray-500 font-sans max-w-2xl mx-auto">
-                 Join thousands of creators using <span className="font-semibold text-gray-900">YouTube Automation AI</span> to scale their social media presence across multiple platforms on autopilot.
+                 Join thousands of creators using <span className="font-semibold text-gray-900">AI YouTube Automation</span> to scale their social media presence across multiple platforms on autopilot.
               </p>
               <Link 
                 href="/blog/how-to-make-ai-tiktok-videos" 

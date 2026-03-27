@@ -28,7 +28,7 @@ export default function TermsPage() {
                <div className="space-y-4">
                   <h2 className="text-2xl font-serif font-bold text-gray-900">1. Agreement to Terms</h2>
                   <p>
-                     By accessing <span className="font-semibold text-gray-900">YouTube Automation AI</span>, you agree to be bound by these Terms of Service. Our <span className="font-semibold text-gray-900">youtube automation software</span> is provided to help you scale your <span className="font-semibold text-gray-900">automated youtube business</span> efficiently.
+                     By accessing <span className="font-semibold text-gray-900">AI YouTube Automation</span>, you agree to be bound by these Terms of Service. Our <span className="font-semibold text-gray-900">youtube automation software</span> is provided to help you scale your <span className="font-semibold text-gray-900">automated youtube business</span> efficiently.
                   </p>
                </div>
 
@@ -49,7 +49,7 @@ export default function TermsPage() {
                <div className="space-y-4">
                   <h2 className="text-2xl font-serif font-bold text-gray-900">4. Service Limitations</h2>
                   <p>
-                     While our <span className="font-semibold text-gray-900">youtube automation AI</span> is highly advanced, we do not guarantee specific revenue results. Success in the <span className="font-semibold text-gray-900">youtube automation business</span> depends on niche selection and strategy.
+                     While our <span className="font-semibold text-gray-900">AI youtube automation</span> is highly advanced, we do not guarantee specific revenue results. Success in the <span className="font-semibold text-gray-900">youtube automation business</span> depends on niche selection and strategy.
                   </p>
                </div>
             </section>

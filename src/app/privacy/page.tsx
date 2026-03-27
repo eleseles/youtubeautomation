@@ -28,7 +28,7 @@ export default function PrivacyPage() {
                <div className="space-y-4">
                   <h2 className="text-2xl font-serif font-bold text-gray-900">1. Information We Collect</h2>
                   <p>
-                     At <span className="font-semibold text-gray-900">YouTube Automation AI</span>, we collect information necessary to provide you with the best <span className="font-semibold text-gray-900">youtube automation software</span> experience. This includes account details, channel connectivity info, and usage data to optimize your <span className="font-semibold text-gray-900">automated youtube business</span> results.
+                     At <span className="font-semibold text-gray-900">AI YouTube Automation</span>, we collect information necessary to provide you with the best <span className="font-semibold text-gray-900">youtube automation software</span> experience. This includes account details, channel connectivity info, and usage data to optimize your <span className="font-semibold text-gray-900">automated youtube business</span> results.
                   </p>
                </div>
 

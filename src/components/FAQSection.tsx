@@ -30,7 +30,7 @@ const faqs = [
     },
     {
         question: "How to make automated youtube shorts?",
-        answer: "Many ask <span className='font-bold text-gray-900'>how to make automated youtube shorts</span> to gain rapid views. We provide <span className='font-semibold text-gray-900 text-olive-green'>youtube automation ai</span> tools that specifically resize and re-script long-form videos into viral vertical shorts automatically."
+        answer: "Many ask <span className='font-bold text-gray-900'>how to make automated youtube shorts</span> to gain rapid views. We provide <span className='font-semibold text-gray-900 text-olive-green'>ai youtube automation</span> tools that specifically resize and re-script long-form videos into viral vertical shorts automatically."
     },
     {
         question: "What is YouTube AI automation meaning?",
@@ -54,7 +54,7 @@ const faqs = [
     },
     {
         question: "What is the role of AI in YouTube automation?",
-        answer: "<span className='font-bold text-gray-900'>YouTube Automation AI</span> is the engine behind modern channels. It handles everything from scripting to thumbnail creation."
+        answer: "<span className='font-bold text-gray-900'>AI YouTube Automation</span> is the engine behind modern channels. It handles everything from scripting to thumbnail creation."
     },
     {
         question: "How to get more automated YouTube views?",

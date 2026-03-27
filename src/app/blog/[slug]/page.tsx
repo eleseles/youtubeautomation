@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       title: post.title,
       description: post.sections[0].content.substring(0, 140) + "...",
       url: `https://youtubeautomation.app/blog/${slug}`,
-      siteName: "YouTube Automation AI",
+      siteName: "AI YouTube Automation",
       type: "article",
     }
   };
@@ -81,7 +81,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         },
         "publisher": {
           "@type": "Organization",
-          "name": "YouTube Automation AI",
+          "name": "AI YouTube Automation",
           "logo": {
             "@type": "ImageObject",
             "url": "https://youtubeautomation.app/logo.png"
@@ -183,7 +183,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           {/* Simple Author Divider */}
           <div className="mt-20 pt-10 border-t border-gray-100 mb-20 text-sm text-gray-400">
              <p className="font-bold text-gray-900 uppercase tracking-widest mb-1">{post.author}</p>
-             <p>Founder & Content Strategist of YouTube Automation AI</p>
+             <p>Founder & Content Strategist of AI YouTube Automation</p>
           </div>
 
           {/* Related Articles */}
