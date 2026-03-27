@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "YouTube Automation AI",
-  description: "YouTube Automation AI helps you automate YouTube content creation. Generate AI scripts, thumbnails, SEO titles & descriptions. Start your automated YouTube channel free. Trusted by 5,000+ creators.",
+  description: "Scale your faceless YouTube channel with AI YouTube Automation Software. Automate your video production, generate AI scripts, and grow your automated youtube channel. Trusted by 5,000+ creators.",
   url: "https://youtubeautomation.app",
   ogImage: "https://youtubeautomation.app/og-image.jpg",
   links: {
@@ -9,6 +9,8 @@ export const siteConfig = {
   },
   keywords: [
     "youtube automation",
+    "faceless youtube automation",
+    "faceless youtube channel",
     "what is youtube automation",
     "automated youtube channel",
     "automate youtube",
