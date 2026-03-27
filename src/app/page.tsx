@@ -7,6 +7,7 @@ import SoftwareAuto from "@/components/SoftwareAuto";
 import StartGuide from "@/components/StartGuide";
 import BlogCarousel from "@/components/BlogCarousel";
 import FAQSection from "@/components/FAQSection";
+import SEOContentSection from "@/components/SEOContentSection";
 import Footer from "@/components/Footer";
 
 const jsonLd = {
@@ -105,6 +106,7 @@ export default function Home() {
         <StartGuide />
         <BlogCarousel />
         <FAQSection />
+        <SEOContentSection />
       </main>
       <Footer />
     </>
