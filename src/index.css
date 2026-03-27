@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 220 10% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 10% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 10% 10%;
+
+    --primary: 65 30% 30%; /* Olive Green base */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 220 10% 10%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 220 5% 45%;
+
+    --accent: 65 30% 30%;
+    --accent-foreground: 220 10% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 65 30% 30%;
+
+    --radius: 1rem;
+
+    --olive-green: 65, 30%, 30%;
+    --olive-green-light: 65, 25%, 35%;
+
+    --font-serif: 'Crimson Pro', serif;
+    --font-sans: 'Inter', sans-serif;
+  }
+
+  .dark {
+    --background: 220 10% 4%;
+    --foreground: 0 0% 95%;
+
+    --card: 220 10% 6%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 220 10% 6%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 65 30% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 10% 12%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 220 10% 15%;
+    --muted-foreground: 220 5% 65%;
+
+    --accent: 65 30% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    --border: 220 10% 15%;
+    --input: 220 10% 15%;
+    --ring: 65 30% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply tracking-tight;
+  }
+  
+  .font-serif {
+    font-family: var(--font-serif);
+  }
+}
+
+@layer utilities {
+  .bg-olive-green {
+    background-color: hsl(var(--primary));
+  }
+  
+  .text-olive-green {
+    color: hsl(var(--primary));
+  }
+
+  .hover\:bg-olive-green-light:hover {
+    background-color: hsl(var(--primary) / 0.9);
+  }
+
+  .glass {
+    @apply bg-white/60 backdrop-blur-xl border border-white/40 shadow-[0_8px_32px_0_rgba(31,38,135,0.07)];
+  }
+}
+
