@@ -34,7 +34,7 @@ const Navbar = () => {
                 {/* Logo */}
                 <Link href="/" className="text-base md:text-lg font-serif font-bold tracking-tighter text-gray-900 hover:opacity-80 transition-opacity flex items-center gap-1.5">
                     <Youtube className="text-olive-green" size={18} />
-                    YouTube <span className="text-olive-green italic font-medium">Automation AI</span>
+                    AI YouTube <span className="text-olive-green italic font-medium">Automation</span>
                 </Link>
 
 
@@ -60,7 +60,7 @@ const Navbar = () => {
                         Sign In
                     </Link>
                     <Link
-                        href="/auth/register"
+                        href="/dashboard"
                         className="bg-olive-green text-white px-3.5 py-1.5 rounded-lg text-[10px] font-bold hover:bg-olive-green-light transition-all shadow-sm"
                     >
                         Get Started
@@ -99,7 +99,7 @@ const Navbar = () => {
                             Sign In
                         </Link>
                         <Link
-                            href="/auth/register"
+                            href="/dashboard"
                             className="bg-olive-green text-white px-6 py-3 rounded-lg text-sm font-bold w-full text-center shadow-md"
                             onClick={() => setIsMobileMenuOpen(false)}
                         >
