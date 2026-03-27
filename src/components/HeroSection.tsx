@@ -23,7 +23,7 @@ const HeroSection = () => {
 
           {/* Heading */}
           <h1 className="text-4xl md:text-7xl font-serif font-bold text-gray-900 leading-[1.2] md:leading-[1.1] tracking-tighter">
-            <span className="text-olive-green italic font-medium">AI YouTube Automation Software</span>: Build Your <span className="text-olive-green italic font-medium">Faceless YouTube Channel Business</span>
+            Best Free <span className="text-olive-green italic font-medium">AI YouTube Automation Software Agent Tool</span>
           </h1>
 
           {/* Subtext */}
