@@ -7,7 +7,7 @@ import { siteConfig } from "@/lib/site-config";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Best Free AI YouTube Automation Software Agent Tool",
+  title: "AI YouTube Automation Software Agent Tool (Free)",
   description: siteConfig.description,
   keywords: siteConfig.keywords,
   authors: [{ name: siteConfig.name, url: siteConfig.url }],
