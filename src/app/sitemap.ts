@@ -11,6 +11,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const routes = [
     '',
     '/blog',
+    '/ai-marketing-automation',
+    '/ai-email-automation',
+    '/ai-linkedin-automation',
+    '/faceless-youtube-automation',
     '/ai-tiktok-video-generator',
     '/privacy',
     '/terms',

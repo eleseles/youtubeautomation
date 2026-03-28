@@ -17,6 +17,10 @@ const Navbar = () => {
     }, []);
 
     const navLinks = [
+        { name: "Automation", href: "/ai-marketing-automation" },
+        { name: "Email", href: "/ai-email-automation" },
+        { name: "LinkedIn", href: "/ai-linkedin-automation" },
+        { name: "Faceless", href: "/faceless-youtube-automation" },
         { name: "Features", href: "#features" },
         { name: "Pricing", href: "#pricing" },
         { name: "Blog", href: "/blog" },
