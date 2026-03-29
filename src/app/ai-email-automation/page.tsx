@@ -2,7 +2,9 @@ import React from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SplitHero from "@/components/SplitHero";
-import { Mail, Inbox, Send, ShieldCheck, Zap, ArrowRight, CheckCircle2, Clock } from "lucide-react";
+import AggressiveFAQ from "@/components/AggressiveFAQ";
+import BlogCarousel from "@/components/BlogCarousel";
+import { Mail, Inbox, Send, ShieldCheck, Zap, ArrowRight, CheckCircle2, Clock, Users, Shield, Rocket, BarChart3 } from "lucide-react";
 import Link from "next/link";
 import { Metadata } from "next";
 
@@ -15,144 +17,287 @@ export const metadata: Metadata = {
   }
 };
 
+const faqs = [
+  {
+    q: "Will my emails end up in the spam folder?",
+    a: "No. Our AI engine handles smart-warming, DMARC alignment, and deliverability monitoring automatically. We maintain a 98% inbox placement rate across all major providers."
+  },
+  {
+    q: "Can the AI handle complex customer inquiries?",
+    a: "The AI reads context, sentiment, and history. It's not a mindless bot; it's a digital proxy that understands your business logic and drafts human-level responses."
+  },
+  {
+    q: "How secure is my inbox data?",
+    a: "Enterprise-grade encryption is our baseline. Your data is isolated, encrypted, and never sold. We only process what's necessary to automate your success."
+  },
+  {
+    q: "Is it difficult to set up with my current email?",
+    a: "If you can login to your email, you can set this up. We have one-click integrations for Gmail, Outlook, and all major IMAP/SMTP services. Zero tech skills needed."
+  }
+];
+
 export default function AIEmailAutomationPage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "AI Email Automation Tool",
+        "operatingSystem": "Web",
+        "applicationCategory": "BusinessApplication",
+        "datePublished": "2026-03-20T08:00:00+00:00",
+        "dateModified": "2026-03-29T12:00:00+00:00",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.8",
+          "ratingCount": "850"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "datePublished": "2026-03-20T08:00:00+00:00",
+        "dateModified": "2026-03-29T12:00:00+00:00",
+        "mainEntity": faqs.map(faq => ({
+          "@type": "Question",
+          "name": faq.q,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.a
+          }
+        }))
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://youtubeautomation.app"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "AI Email Automation",
+            "item": "https://youtubeautomation.app/ai-email-automation"
+          }
+        ]
+      }
+    ]
+  };
+
   return (
     <>
       <Navbar />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <main className="bg-[#FCFCFA]">
         {/* Split Hero Section */}
         <SplitHero 
-          badge={{ icon: <Mail size={14} />, text: "SMART INBOX READY" }}
+          badge={{ icon: <Mail size={14} />, text: "EMAIL ENGINE ACTIVE" }}
           title={<>AI Email Automation <span className="text-olive-green italic">Tool</span> (Free)</>}
-          description="Transform your email communication with AI. From automated sorting to human-like drafting, manage your campaigns and inbox on autopilot."
-          bullet="EMAIL AUTOMATION READY"
-          ctaText="Activate Smart Email"
+          description="Transform your inbox into a high-converting growth tool. Our AI engine writes, responds, and manages your entire email workflow while you focus on high-level strategy."
+          bullet="Smart Inbox Management"
+          ctaText="Start Free Automation"
           ctaHref="/dashboard"
           rightElement={<img src="/ai-email-hero.png" alt="Email Automation" className="w-full h-full object-cover" />}
-          statusText="Smart Inbox Operational"
-        />
+          statusText="Response Speed: < 2 Mins"
+         />
 
-        {/* Features Section */}
-        <section className="py-24 bg-white border-y border-gray-100">
+        {/* What is AI Email Automation? Section */}
+        <section className="py-24 bg-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-5xl font-serif font-bold text-gray-900 mb-4">Email Efficiency, Redefined</h2>
-              <p className="text-gray-500 max-w-xl mx-auto">Our AI tools handle the repetitive parts of email, so you can focus on building real connections.</p>
+            <div className="max-w-4xl mx-auto text-center mb-20">
+              <h2 className="text-4xl md:text-6xl font-serif font-bold text-gray-900 mb-8 tracking-tight">
+                What is <span className="text-olive-green italic">AI Email Automation?</span>
+              </h2>
+              <p className="text-xl text-gray-600 leading-relaxed font-light">
+                AI Email Automation is the evolution of communication. It's an <span className="font-semibold text-gray-900">intelligent digital assistant</span> that doesn't just send templates, but understands intent, drafts personalized replies, and moves prospects through your funnel automatically.
+              </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {[
-                {
-                  icon: <Inbox className="text-olive-green" size={24} />,
-                  title: "AI Smart Sorting",
-                  desc: "Automatically categorize incoming emails by priority, intent, and sentiment."
-                },
-                {
-                  icon: <Send className="text-olive-green" size={24} />,
-                  title: "Predictive Drafting",
-                  desc: "Generate personalized responses based on previous conversations and context."
-                },
-                {
-                  icon: <ShieldCheck className="text-olive-green" size={24} />,
-                  title: "DMARC & Deliverability",
-                  desc: "Built-in AI monitoring to ensure your emails always land in the primary inbox."
-                }
-              ].map((feature, i) => (
-                <div key={i} className="p-8 rounded-2xl bg-[#FCFCFA] border border-gray-50 hover:border-olive-green/20 transition-all group">
-                  <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-sm mb-6 group-hover:scale-110 transition-transform">
-                    {feature.icon}
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
-                  <p className="text-gray-500 leading-relaxed">{feature.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Workflow & Efficiency Section */}
-        <section className="py-24 overflow-hidden">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-col lg:flex-row-reverse items-center gap-16">
-              <div className="lg:w-1/2 space-y-8">
-                <h2 className="text-3xl md:text-5xl font-serif font-bold text-gray-900 leading-[1.1]">
-                  Save Hours Every Week <br />
-                  <span className="text-olive-green italic font-medium">With AI Filters</span>
-                </h2>
-                <p className="text-lg text-gray-500 leading-relaxed">
-                  Most people spend 28% of their work week reading and answering emails. Our AI reduces that time by up to 70% by automating routine inquiries and flagging what actually matters.
-                </p>
-                <ul className="space-y-4">
-                  {[
-                    "Zero-inbox automation workflow",
-                    "Custom AI reply templates",
-                    "Spam & Phishing AI protection",
-                    "Optimized sending times using AI"
-                  ].map((item, i) => (
-                    <li key={i} className="flex items-center gap-3 text-gray-700 font-medium">
-                      <CheckCircle2 className="text-olive-green" size={20} />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-                <div className="pt-4">
-                  <Link
-                    href="/dashboard"
-                    className="inline-flex items-center gap-2 text-olive-green font-bold hover:gap-4 transition-all"
-                  >
-                    View time-saving metrics <ArrowRight size={18} />
-                  </Link>
-                </div>
-              </div>
-              <div className="lg:w-1/2 relative">
-                <div className="bg-white p-6 rounded-3xl shadow-2xl border border-gray-100 flex flex-col gap-6">
-                  <div className="flex items-center gap-4">
-                    <div className="w-10 h-10 rounded-full bg-olive-green/10 flex items-center justify-center">
-                      <Clock className="text-olive-green" size={20} />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+              <div className="space-y-8">
+                <div className="group">
+                  <div className="flex gap-6 items-start">
+                    <div className="w-14 h-14 bg-olive-green/10 rounded-2xl flex items-center justify-center shrink-0 group-hover:bg-olive-green group-hover:text-white transition-all duration-300">
+                      <Inbox size={28} />
                     </div>
                     <div>
-                      <p className="text-xs text-gray-400 font-bold uppercase tracking-wider">Time Saved This Month</p>
-                      <p className="text-2xl font-serif font-bold text-gray-900">42.5 Hours</p>
+                      <h3 className="text-2xl font-bold text-gray-900 mb-3">Contextual Triage</h3>
+                      <p className="text-gray-500 leading-relaxed">
+                        The AI scans incoming emails for urgency, sentiment, and topic, automatically categorizing and prioritizing your most important leads.
+                      </p>
                     </div>
                   </div>
-                  <div className="h-48 w-full bg-gray-50 rounded-2xl flex items-end justify-between p-4 gap-2">
-                    {[40, 70, 45, 90, 65, 80, 55].map((h, i) => (
-                      <div 
-                        key={i} 
-                        className="w-full bg-olive-green/20 rounded-t-lg transition-all duration-1000" 
-                        style={{ height: `${h}%`, backgroundColor: i === 3 ? '#8ca38c' : '' }}
-                      />
-                    ))}
+                </div>
+
+                <div className="group">
+                  <div className="flex gap-6 items-start">
+                    <div className="w-14 h-14 bg-olive-green/10 rounded-2xl flex items-center justify-center shrink-0 group-hover:bg-olive-green group-hover:text-white transition-all duration-300">
+                      <Zap size={28} />
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-bold text-gray-900 mb-3">Hyper-Personalized Drafting</h3>
+                      <p className="text-gray-500 leading-relaxed">
+                        Stop using boring templates. Our system reads the history of your conversation to draft human-like replies that feel authentic and drive conversions.
+                      </p>
+                    </div>
                   </div>
-                  <p className="text-center text-sm text-gray-500 font-medium italic">"The AI agent handled 142 routine emails today."</p>
+                </div>
+
+                <div className="group">
+                  <div className="flex gap-6 items-start">
+                    <div className="w-14 h-14 bg-olive-green/10 rounded-2xl flex items-center justify-center shrink-0 group-hover:bg-olive-green group-hover:text-white transition-all duration-300">
+                      <ShieldCheck size={28} />
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-bold text-gray-900 mb-3">Deliverability Shield</h3>
+                      <p className="text-gray-500 leading-relaxed">
+                        Our agents monitor your domain health in real-time, adjusting sending patterns to ensure your emails always land in the main inbox, not the spam folder.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="relative">
+                <div className="absolute inset-0 bg-olive-green/5 blur-3xl rounded-full scale-125 -z-10" />
+                <div className="bg-[#FCFCFA] p-10 rounded-[3rem] border border-gray-100 shadow-sm">
+                   <div className="space-y-6">
+                      <div className="flex items-center justify-between pb-6 border-b border-gray-100">
+                         <span className="text-xs font-black uppercase tracking-widest text-olive-green">Standard CRM</span>
+                         <span className="text-xs font-black uppercase tracking-widest text-gray-400">vs</span>
+                         <span className="text-xs font-black uppercase tracking-widest text-olive-green">AI Email Agent</span>
+                      </div>
+                      <div className="space-y-4">
+                         {[
+                            { label: "Drafting", manual: "3-5 Mins / Email", ai: "Seconds / Batch" },
+                            { label: "Personalization", manual: "Surface Level", ai: "Deep Contextual" },
+                            { label: "Filtering", manual: "Manual / Rule-based", ai: "Sentiment-driven" },
+                            { label: "Success Rate", manual: "Standard CTR", ai: "4x Engagement" }
+                         ].map((item, i) => (
+                            <div key={i} className="flex flex-col gap-2">
+                               <div className="flex justify-between text-xs font-bold text-gray-900 uppercase">
+                                  <span>{item.label}</span>
+                               </div>
+                               <div className="h-6 w-full bg-gray-100 rounded-full overflow-hidden flex">
+                                  <div className="h-full bg-gray-300 w-1/3 text-[8px] flex items-center px-4 font-bold">MANUAL</div>
+                                  <div className="h-full bg-olive-green flex-1 text-[8px] flex items-center justify-end px-4 font-bold text-white uppercase italic">AI POWERED</div>
+                               </div>
+                            </div>
+                         ))}
+                      </div>
+                   </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Closing CTA */}
-        <section className="py-24 container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-gray-900 rounded-[2.5rem] p-12 md:p-24 relative overflow-hidden text-center">
-            {/* Background design */}
-            <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-olive-green/10 blur-[120px] rounded-full" />
-            
-            <div className="relative z-10 max-w-4xl mx-auto space-y-8">
-              <h2 className="text-3xl md:text-6xl font-serif font-medium text-white tracking-tight">
-                Focus on the <span className="italic">conversation</span>, <br />
-                not the <span className="italic">inbox.</span>
-              </h2>
-              <p className="text-gray-400 text-lg md:text-xl">
-                Ready to unleash the power of AI on your email workflows?
-              </p>
-              <div className="pt-4">
-                <Link
-                  href="/dashboard"
-                  className="bg-olive-green text-white px-12 py-5 rounded-full text-lg font-bold hover:bg-olive-green-light transition-all inline-block shadow-xl shadow-black/20"
-                >
-                  Start Free Trial
-                </Link>
+        {/* Statistics & Feature Grid Section */}
+        <section className="py-24 bg-white relative overflow-hidden">
+          <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
+            <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(#8ca38c_1px,transparent_1px)] [background-size:32px_32px]" />
+          </div>
+
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="flex flex-col lg:flex-row gap-16 items-center mb-24">
+              <div className="lg:w-1/2 space-y-8">
+                <div className="inline-flex items-center gap-2 px-4 py-2 bg-olive-green/5 rounded-full border border-olive-green/10">
+                  <span className="w-2 h-2 bg-olive-green rounded-full animate-pulse" />
+                  <span className="text-[10px] font-black uppercase tracking-widest text-olive-green">Communication Excellence</span>
+                </div>
+                <h2 className="text-4xl md:text-6xl font-serif font-bold text-gray-900 leading-[1.1]">
+                   Best <span className="italic text-olive-green">Email Marketing Automation</span> Software Tool
+                </h2>
+                <p className="text-xl text-gray-500 leading-relaxed font-light">
+                   Dominating your inbox require the best email marketing automation software tool. Our AI engine handle the entire communication cycle so you never miss a lead again.
+                </p>
+                <div className="grid grid-cols-2 gap-6 pt-4">
+                   <div className="p-6 bg-[#FCFCFA] rounded-2xl border border-gray-100">
+                      <p className="text-3xl font-serif font-bold text-gray-900 mb-1">98%</p>
+                      <p className="text-xs font-bold text-gray-400 uppercase">Inbox Placement Rate</p>
+                   </div>
+                   <div className="p-6 bg-[#FCFCFA] rounded-2xl border border-gray-100">
+                      <p className="text-3xl font-serif font-bold text-olive-green mb-1">24/7</p>
+                      <p className="text-xs font-bold text-gray-400 uppercase">Autonomous Operation</p>
+                   </div>
+                </div>
               </div>
+              <div className="lg:w-1/2 grid grid-cols-1 md:grid-cols-2 gap-6">
+                {[
+                  {
+                    title: "Smart Triage",
+                    desc: "AI automatically prioritizes high-value leads and schedules follow-ups.",
+                    icon: <Clock size={20} />
+                  },
+                  {
+                    title: "Brand Voice",
+                    desc: "Learns and replicates your unique tone for 100% consistent communication.",
+                    icon: <Users size={20} />
+                  },
+                  {
+                    title: "Security Shield",
+                    desc: "Enterprise-grade encryption and protocol alignment for total safety.",
+                    icon: <Shield size={20} />
+                  },
+                  {
+                    title: "Lead Intelligence",
+                    desc: "Unified analytics dashboard showing real-time conversion and engagement.",
+                    icon: <BarChart3 size={20} />
+                  }
+                ].map((item, i) => (
+                  <div key={i} className="p-8 bg-[#FCFCFA] rounded-3xl border border-gray-100 hover:border-olive-green/30 hover:bg-white hover:shadow-2xl hover:shadow-olive-green/5 transition-all group">
+                    <div className="w-10 h-10 bg-white rounded-xl shadow-sm flex items-center justify-center mb-6 text-olive-green group-hover:bg-olive-green group-hover:text-white transition-all">
+                      {item.icon}
+                    </div>
+                    <h3 className="text-lg font-bold text-gray-900 mb-3 tracking-tight">{item.title}</h3>
+                    <p className="text-sm text-gray-500 leading-relaxed">{item.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Aggressive FAQ Section */}
+        <AggressiveFAQ faqs={faqs} />
+
+        {/* Blog Carousel Section */}
+        <BlogCarousel />
+
+        {/* Final Sell CTA Section */}
+        <section className="py-24 bg-white">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="bg-gray-900 rounded-[3rem] p-8 md:p-16 relative overflow-hidden group">
+               <div className="absolute top-0 right-0 w-96 h-96 bg-olive-green/10 blur-[100px] rounded-full group-hover:scale-110 transition-transform duration-1000" />
+               <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-12">
+                  <div className="max-w-2xl text-center lg:text-left space-y-6">
+                     <h3 className="text-3xl md:text-5xl font-serif font-medium text-white leading-tight">
+                        Master Your <span className="italic text-olive-green">Communication</span> Suite.
+                     </h3>
+                     <p className="text-gray-400 text-lg">
+                        Stop managing your inbox. Start dominating your industry with autonomous email growth.
+                     </p>
+                  </div>
+                  <div className="flex flex-col items-center gap-4">
+                     <Link 
+                       href="/dashboard" 
+                       className="px-12 py-6 bg-olive-green text-white rounded-full font-bold text-lg hover:scale-105 transition-all shadow-2xl shadow-olive-green/20"
+                     >
+                        Get Early Access
+                     </Link>
+                     <p className="text-[10px] font-bold text-gray-500 uppercase tracking-widest">Immediate 1-Account Setup</p>
+                  </div>
+               </div>
             </div>
           </div>
         </section>
